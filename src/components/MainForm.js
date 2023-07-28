@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { saveHistory } from "../utils/contactUtils";
+import React, {useState} from "react";
+import {saveHistory} from "../utils/contactUtils";
 
 const MainForm = ({ setContactHistory, setYourContacts }) => {
-  const [countryCode, setCountryCode] = useState("91");
+  const [countryCode, setCountryCode] = useState("+");
   const [number, setNumber] = useState("");
   const [validNumber, setValidNumber] = useState(false);
   const [name, setName] = useState("");
@@ -14,8 +14,7 @@ const MainForm = ({ setContactHistory, setYourContacts }) => {
 
   function now() {
     const now = new Date();
-    const formattedString = `Contacted on: ${now.toUTCString()}`;
-    return formattedString;
+    return `Contacted on: ${now.toUTCString()}`;
   }
 
   const validatePhoneNumber = (number) => {

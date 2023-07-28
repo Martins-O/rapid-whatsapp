@@ -1,6 +1,6 @@
 import React from "react";
 import swal from "sweetalert";
-import { saveHistory } from "../utils/contactUtils";
+import {saveHistory} from "../utils/contactUtils";
 
 const Contacts = ({ yourContacts, setYourContacts, setContactHistory }) => {
   const deleteContact = (event) => {
@@ -61,8 +61,7 @@ const Contacts = ({ yourContacts, setYourContacts, setContactHistory }) => {
 
   function now() {
     const now = new Date();
-    const formattedString = `Contacted on: ${now.toUTCString()}`;
-    return formattedString;
+    return `Contacted on: ${now.toUTCString()}`;
   }
 
   function handleCopyToClipboard(value) {

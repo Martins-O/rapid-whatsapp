@@ -1,4 +1,4 @@
-export const saveHistory = (number, timedate) => {
+export const saveHistory = (number, timeDate) => {
   let historyArray;
   let currentHistory = localStorage.getItem("history");
   if (!currentHistory) {
@@ -8,7 +8,7 @@ export const saveHistory = (number, timedate) => {
   }
   historyArray.unshift({
     number: number,
-    timedate: timedate,
+    timedate: timeDate,
   });
   localStorage.setItem("history", JSON.stringify(historyArray));
 };
